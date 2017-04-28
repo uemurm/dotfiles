@@ -49,7 +49,7 @@ if($?tcsh)then
 
     # for tcsh environment
     set addsuffix
-    set complete    # = enhance
+    set complete    = enhance
 #   set recexact
     set correct     = cmd
     set autocorrect
@@ -70,9 +70,5 @@ if($?tcsh)then
     set color
 
     source ~/.complete.tcsh
-
 endif
 
-if($?loginsh)then
-  rxvt --geometry 80x50+0+0 &
-endif
