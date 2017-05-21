@@ -41,12 +41,13 @@ if($?tcsh)then
     set prompt = '%U%~%u\n> '
 
     # Set tcsh key binding
-    bindkey ^P history-search-backward
-    bindkey ^N history-search-forward
-    bindkey ^W backward-delete-word
-    bindkey ^R backward-word
-    bindkey ^G forward-word
-
+    bindkey    ^P   history-search-backward
+    bindkey    ^N   history-search-forward
+    bindkey -k home backward-delete-word
+    bindkey    ^R   backward-word
+    bindkey    ^G   forward-word
+    bindkey -k up   kill-line
+    bindkey "^[[5~" kill-whole-line	# Page up key
     # for tcsh environment
     set addsuffix
     set complete    = enhance
