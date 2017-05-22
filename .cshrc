@@ -2,16 +2,10 @@ setenv  SHELL           /bin/tcsh
 setenv  EDITOR          vim
 setenv  VISUAL          vim
 setenv  PAGER           less
-setenv  JLESSCHARSET    japanese
 setenv  LESS		--ignore-case
 
 source  ~/.alias.csh
 source  ~/.nuix.csh
-
-#
-# Set terminal key binding
-#
-#stty erase ^H
 
 #
 # add local bin directory to path
@@ -65,11 +59,9 @@ if($?tcsh)then
     set history     = 2000
     set histdup     = erase
     set savehist    = ( 2000 merge )
-    set dspkanji    = euc
     set fignore     = (.o \\~)
     set implicitcd
     set color
 
     source ~/.complete.tcsh
 endif
-
