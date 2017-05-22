@@ -1,4 +1,3 @@
-setenv  SHELL           /bin/tcsh
 setenv  EDITOR          vim
 setenv  VISUAL          vim
 setenv  PAGER           less
@@ -7,10 +6,7 @@ setenv  LESS		--ignore-case
 source  ~/.alias.csh
 source  ~/.nuix.csh
 
-#
-# add local bin directory to path
-#
-set path = ( /cygdrive/c/Program\ Files/Java/jdk1.6.0/bin /bin $path ~/bin )
+set path = ( /bin $path ~/bin )
 
 setenv  RUBYLIB         ~/lib
 
@@ -25,7 +21,6 @@ if($?tcsh)then
     else
       dirs -L ~/.cshdirs
     endif
-    setenv SHELL        tcsh
     # Set Prompt
     if ($?SSH_CONNECTION) then
       set prompt = '%{\e[31m%B%m%b\e[00m%} %U%c04%u '
@@ -41,7 +36,7 @@ if($?tcsh)then
     bindkey    ^R   backward-word
     bindkey    ^G   forward-word
     bindkey -k up   kill-line
-    bindkey "^[[5~" kill-whole-line	# Page up key
+    bindkey "^[[5~" kill-whole-line	# Page up key. cf. https://opensource.apple.com/source/tcsh/tcsh-65/tcsh/cygwin/bindkey.tcsh
     # for tcsh environment
     set addsuffix
     set complete    = enhance
