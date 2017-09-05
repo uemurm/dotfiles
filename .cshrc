@@ -19,7 +19,7 @@ set     nobeep
 if($?tcsh)then
     if($?loginsh)then
     else
-      dirs -L ~/.cshdirs
+      dirs -L ~/.cshdirs	# Check this file for a message 'Missing name for redirect.'
     endif
     # Set Prompt
     if ($?SSH_CONNECTION) then
@@ -27,7 +27,7 @@ if($?tcsh)then
     else
       set prompt = '%{\e[35m%B%m%b\e[00m%} %U%c04%u '
     endif
-    set prompt = '%U%~%u\n> '
+    set prompt = '%{\e[32m%S%/%s\e[00m%} \n> '
 
     # Set tcsh key binding
     bindkey    ^P   history-search-backward
