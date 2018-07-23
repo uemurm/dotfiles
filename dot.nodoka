@@ -1,0 +1,107 @@
+   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  # Nodoka - doten.nodoka
+  # Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
+  #
+  # Modify by applet on 2014-11-11 for NodokaGuiEdit
+  #
+include "read-keyboard-define.nodoka"                                   #1. read keyboard define file
+keymap Global                                                           #2. Global keymap setting
+  #3. This setting is conviniense.
+key C-A-D = &DescribeBindings                                           # (1) Ctrl-Alt-D as current key map describe to log.
+key S-F1= &DescribeBindings                                             # (2) Shift-F1 same
+key F1 = &SendPostMessage("PostTray",,"Nodoka", 0x0205, 0, 0)           # (3) Open Nodoka Menu by F1.
+#include "Shift-F2_toggle_US-JP-Keyboard.nodoka"                        # (4) Shift-F2 Toggle Japanese/English keyboard layout
+  #
+  #4. sample setting
+  # #1. setting (1) to (7) are one use only.
+#include "contrib\\nodoka-settings.txt"                                 # #2. These samples setting files from User. These are non support.
+  # #3. setting (8) to (11) have same keybind setting. Be carefully.
+  # #4. You can reuse setting files, then copy from install folder to your Home directory.
+#include "contrib\\sample.nodoka"                                       # (1) example from Help Esc<->HankakuZenkaku. Ctrl<->Eisu. Diamond Cursor ESDX. Ctrl-H,G,M. Henkan Key as IME ON. Muhenkan Key as IME OFF.
+#include "contrib\\98x1.nodoka"                                         # (2) Keyboard Setting file for NEC PC98x1 keyboard. Please Line 7 to 13 are comment out. And Write keymap Global.
+#include "contrib\\ax.nodoka"                                           # (3) Keyboard Setting file for AX Keyboard. Please Line 7 to 13 are comment out. And Write keymap Global.
+#include "contrib\\109onAX.nodoka"                                      # (4) Keyboard Setting file for AX Keyboard. Use with (3)ax.nodoka. maybe,
+#include "contrib\\dvorak.nodoka"                                       # (5) dvorak Setting file. Please use -DUSE104(104.nodoka).
+#include "contrib\\DVORAKon109.nodoka"                                  # (6) dvorak Setting file. Please use -DUSE109(109.nodoka).
+#include "contrib\\keitai.nodoka"                                       # (7) Japanese mobile phone line Kana input by Ten-Key. Please use -DUSE109(109.nodoka).
+  #
+#include "contrib\\other.nodoka"                                        # (8) desktopview setting, SandS, Sound Volume Control. Custom Keyword. Ten-Key on Full key exchange to Symbol key.
+#include "contrib\\ime.nodoka"                                          # (9) IME ON/OFF Settings
+#include "contrib\\cursor.nodoka"                                       # (10) Diamond Cursor, Backspace, and Enter Settings.#include "contrib\\no_badusb.nodoka"                                    # (11) Suppresses the key input by BadUSB keyboard.
+  #
+  #5. User Custom setting
+
+#-----------------------------------------------------------------------------#
+# Common configurations
+#-----------------------------------------------------------------------------#
+
+#-------------------------------------#
+# For ThinkPad keyboards
+#-------------------------------------#
+
+# RightAlt -> Enter
+# mod Alt -= RightAlt
+# key RightAlt = Enter
+
+# PrintScreen=> RightAlt
+#mod PrintScreen -= PrintScreen
+#mod alt += Applications
+#key *PrintScreen = *RightCtrlAlt
+
+# RightCtrl => App
+mod Control -= RightControl
+key RightControl = Applications
+
+#-------------------------------------#
+# Combination keys
+#-------------------------------------#
+key *S-C-OpenBracket = *S-Esc
+key C-CloseBracket = C-k
+key *S-C-m = *S-Enter
+key A-C-d = A-Down
+#key C-w = C-a
+key WakeUp = Enter
+
+key *S-C-w = *S-Home
+key *S-C-e = *S-End
+key *S-C-u = *S-PageUp
+key *S-C-d = *S-PageDown
+key *S-C-h = *S-Left
+key *S-C-j = *S-Down
+key *S-C-k = *S-Up
+key *S-C-l = *S-right
+
+key *S-W-h = *S-C-Left
+key *S-W-j = *S-Down
+key *S-W-k = *S-Up
+key *S-W-l = *S-C-Right
+
+key *S-*C-Enter = *S-*C-BackSpace
+key PageDown = Enter
+key *S-*C-BackSpace = *S-*C-Enter
+
+#--------------------------------------------------
+# Move between Virtual Desktops
+#--------------------------------------------------
+key W-C-h = W-C-Left
+key W-C-l = W-C-Right
+key Left  = W-C-Left
+key Right = W-C-Right
+
+#-------------------------------------#
+# Swap CapsLock and LeftCtrl
+#-------------------------------------#
+mod control += CapsLock
+key *CapsLock = *LeftControl
+mod control -= LeftControl
+key *LeftControl = *CapsLock
+
+# Task switching
+key A-Tab = A-C-Tab
+key A-C-Tab = A-Tab
+
+#--------------------------------------------------
+# HH Keyborad
+#--------------------------------------------------
+mod Windows -= RightWindows
+key RightWindows = Applications
