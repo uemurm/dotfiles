@@ -1,4 +1,4 @@
-  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # Nodoka - doten.nodoka
   # Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
   #
@@ -39,10 +39,14 @@ key F1 = &SendPostMessage("PostTray",,"Nodoka", 0x0205, 0, 0)           # (3) Op
 # For ThinkPad keyboards
 #-------------------------------------#
 
+# RightAlt -> Enter
+# mod Alt -= RightAlt
+# key RightAlt = Enter
+
 # PrintScreen=> RightAlt
-# mod PrintScreen -= PrintScreen
-# mod alt += Applications
-# key *PrintScreen = *RightCtrlAlt
+#mod PrintScreen -= PrintScreen
+#mod alt += Applications
+#key *PrintScreen = *RightCtrlAlt
 
 # RightCtrl => App
 mod Control -= RightControl
@@ -55,6 +59,7 @@ key *S-C-OpenBracket = *S-Esc
 key C-CloseBracket = C-k
 key *S-C-m = *S-Enter
 key A-C-d = A-Down
+#key C-w = C-a
 key WakeUp = Enter
 
 key *S-C-w = *S-Home
@@ -91,9 +96,7 @@ key *CapsLock = *LeftControl
 mod control -= LeftControl
 key *LeftControl = *CapsLock
 
-#-------------------------------------#
 # Task switching
-#-------------------------------------#
 key A-Tab = A-C-Tab
 key A-C-Tab = A-Tab
 
