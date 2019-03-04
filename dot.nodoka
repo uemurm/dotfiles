@@ -1,4 +1,4 @@
-   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # Nodoka - doten.nodoka
   # Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
   #
@@ -79,14 +79,6 @@ key *S-W-l = *S-C-Right
 key *S-*C-Enter = *S-*C-BackSpace
 key PageDown = Enter
 key *S-*C-BackSpace = *S-*C-Enter
-
-#--------------------------------------------------
-# Move between Virtual Desktops
-#--------------------------------------------------
-key W-C-h = W-C-Left
-key W-C-l = W-C-Right
-key Left  = W-C-Left
-key Right = W-C-Right
 
 #-------------------------------------#
 # Swap CapsLock and LeftCtrl

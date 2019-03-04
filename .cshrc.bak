@@ -1,0 +1,90 @@
+setenv  SHELL           /bin/tcsh
+setenv  EDITOR          vim
+setenv  VISUAL          vim
+setenv  PAGER           less
+setenv  LESS		--ignore-case
+
+# source  ~/.alias.csh
+# source  ~/.nuix.csh
+
+#
+# add local bin directory to path
+#
+set path = ( /cygdrive/c/Program\ Files/Java/jdk1.6.0/bin /bin $path ~/bin )
+
+setenv  RUBYLIB         ~/lib
+
+unset   autologout
+set     nobeep
+
+#----------------------------------------
+# tcsh specific configuration
+#----------------------------------------
+if($?tcsh)then
+    if($?loginsh)then
+    else
+      dirs -L ~/.cshdirs
+    endif
+    setenv SHELL        tcsh
+    # Set Prompt
+    if ($?SSH_CONNECTION) then
+      set prompt = '%{\e[31m%B%m%b\e[00m%} %U%c04%u '
+    else
+      set prompt = '%{\e[35m%B%m%b\e[00m%} %U%c04%u '
+    endif
+    set prompt = '%U%~%u\n> '
+
+    # Set tcsh key binding
+    bindkey    ^P   history-search-backward
+    bindkey    ^N   history-search-forward
+    bindkey -k home backward-delete-word
+    bindkey    ^R   backward-word
+    bindkey    ^G   forward-word
+    bindkey -k up   kill-line
+    bindkey "^[[5~" kill-whole-line	# Page up key
+    # bindkey "^[[D"  backward-delete-char    # Cursor left key
+
+    # for tcsh environment
+    set addsuffix
+    set complete    = enhance
+#   set recexact
+    set correct     = cmd
+    set autocorrect
+    set autoexpand
+    set recognize_only_executables
+    set ignoreeof
+    set dunique
+    set dextract
+    set dirsfile    = ~/.cshdirs
+    set savedirs
+    set autolist    = ambiguous
+    set history     = 2000
+    set histdup     = erase
+    set savehist    = ( 2000 merge )
+    set fignore     = (.o \\~)
+    set implicitcd
+    set color
+
+    # source ~/.complete.tcsh
+endif
+
+# Example bindkey.tcsh which binds some of the common xterm/linux/cygwin
+# terminal keys.
+# bindkey -e              # Force EMACS key binding
+
+# bindkey "^[[2~"   yank          # Insert key
+# bindkey "^[[3~"   delete-char       # Delete key
+# bindkey "^[[H"    beginning-of-line # Home key
+# bindkey "^[[F"    end-of-line       # End key
+# bindkey "^[[5~"   up-history        # Page up key
+# bindkey "^[[6~"   down-history      # Page down key
+
+# bindkey "^[[C"    forward-char      # Cursor right
+# bindkey "^[[D"    backward-char     # Cursor left
+# bindkey "^[[A"    up-history        # Cursor up
+# bindkey "^[[B"    down-history      # Cursor down
+# bindkey "^[^[[D"  backward-word     # Alt Cursor left
+# bindkey "^[^[[C"  forward-word      # Alt Cursor right
+
+# bindkey "^?"      backward-delete-char  # However the BS key is defined...
+# bindkey "^H"      backward-delete-char  # However the BS key is defined...
