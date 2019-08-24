@@ -4,7 +4,6 @@ setenv  PAGER           less
 setenv  LESS		--ignore-case
 
 source  ~/.alias.csh
-source  ~/.nuix.csh
 
 set path = ( /bin $path ~/bin )
 
