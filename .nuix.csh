@@ -1,9 +1,0 @@
-set WORK='/mnt/d/work'
-set REV="$WORK/Master/DESK"
-#set REV="$WORK/7.0/RunHead"
-set CORE="$REV/core"
-set FUNC_TESTS="$CORE/functional-tests"
-set LIB="$FUNC_TESTS/src/test/rspec/lib"
-set WORKERLOG="$FUNC_TESTS/log/functional-tests"
-set LOG="$FUNC_TESTS/build/reports"
-set METADATA="$FUNC_TESTS/build/temp-user-data/Custom Metadata"
