@@ -1,0 +1,6 @@
+[user]
+	name = Mitsu Uemura
+[alias]
+    st = status
+    ci = commit
+    br = branch
