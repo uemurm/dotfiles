@@ -36,6 +36,14 @@ key F1 = &SendPostMessage("PostTray",,"Nodoka", 0x0205, 0, 0)           # (3) Op
 #-----------------------------------------------------------------------------#
 
 #-------------------------------------#
+# Swap CapsLock and LeftCtrl
+#-------------------------------------#
+mod control += CapsLock
+key *CapsLock = *LeftControl
+mod control -= LeftControl
+key *LeftControl = *CapsLock
+
+#-------------------------------------#
 # For ThinkPad keyboards
 #-------------------------------------#
 
@@ -81,14 +89,8 @@ key PageDown = Enter
 key *S-*C-BackSpace = *S-*C-Enter
 
 #-------------------------------------#
-# Swap CapsLock and LeftCtrl
+# Task switching on Windows 10
 #-------------------------------------#
-mod control += CapsLock
-key *CapsLock = *LeftControl
-mod control -= LeftControl
-key *LeftControl = *CapsLock
-
-# Task switching
 key A-Tab = A-C-Tab
 key A-C-Tab = A-Tab
 
