@@ -64,10 +64,10 @@ key *S-C-w = *S-Home
 key *S-C-e = *S-End
 key *S-C-u = *S-PageUp
 key *S-C-d = *S-PageDown
-key *S-C-h = *S-Left
+key *S-*A-C-h = *S-*A-Left
 key *S-C-j = *S-Down
 key *S-C-k = *S-Up
-key *S-C-l = *S-right
+key *S-*A-C-l = *S-*A-right
 
 key *S-W-h = *S-C-Left
 key *S-W-j = *S-Down
