@@ -47,15 +47,6 @@ key *LeftControl = *CapsLock
 # For ThinkPad keyboards
 #-------------------------------------#
 
-# RightAlt -> Enter
-# mod Alt -= RightAlt
-# key RightAlt = Enter
-
-# PrintScreen=> RightAlt
-#mod PrintScreen -= PrintScreen
-#mod alt += Applications
-#key *PrintScreen = *RightCtrlAlt
-
 # RightCtrl => App
 mod Control -= RightControl
 key RightControl = Applications
