@@ -58,7 +58,6 @@ key *S-C-OpenBracket = *S-Esc
 key C-CloseBracket = C-k
 key *S-C-m = *S-Enter
 key A-C-d = A-Down
-#key C-w = C-a
 key WakeUp = Enter
 
 key *S-C-w = *S-Home
@@ -88,5 +87,7 @@ key A-C-Tab = A-Tab
 #--------------------------------------------------
 # HH Keyborad
 #--------------------------------------------------
+
+#
 mod Windows -= RightWindows
 key RightWindows = Applications
