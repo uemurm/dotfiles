@@ -3,7 +3,6 @@ setenv  VISUAL          vim
 setenv  PAGER           less
 
 source  ~/.alias.csh
-source  ~/.nuix.csh
 
 set path = ( /bin $path ~/bin )
 

@@ -1,4 +1,4 @@
-   #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   # Nodoka - doten.nodoka
   # Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
   #
@@ -36,17 +36,16 @@ key F1 = &SendPostMessage("PostTray",,"Nodoka", 0x0205, 0, 0)           # (3) Op
 #-----------------------------------------------------------------------------#
 
 #-------------------------------------#
+# Swap CapsLock and LeftCtrl
+#-------------------------------------#
+mod control += CapsLock
+key *CapsLock = *LeftControl
+mod control -= LeftControl
+key *LeftControl = *CapsLock
+
+#-------------------------------------#
 # For ThinkPad keyboards
 #-------------------------------------#
-
-# RightAlt -> Enter
-# mod Alt -= RightAlt
-# key RightAlt = Enter
-
-# PrintScreen=> RightAlt
-#mod PrintScreen -= PrintScreen
-#mod alt += Applications
-#key *PrintScreen = *RightCtrlAlt
 
 # RightCtrl => App
 mod Control -= RightControl
@@ -59,17 +58,16 @@ key *S-C-OpenBracket = *S-Esc
 key C-CloseBracket = C-k
 key *S-C-m = *S-Enter
 key A-C-d = A-Down
-#key C-w = C-a
 key WakeUp = Enter
 
 key *S-C-w = *S-Home
 key *S-C-e = *S-End
 key *S-C-u = *S-PageUp
 key *S-C-d = *S-PageDown
-key *S-C-h = *S-Left
+key *S-*A-C-h = *S-*A-Left
 key *S-C-j = *S-Down
 key *S-C-k = *S-Up
-key *S-C-l = *S-right
+key *S-*A-C-l = *S-*A-right
 
 key *S-W-h = *S-C-Left
 key *S-W-j = *S-Down
@@ -80,28 +78,16 @@ key *S-*C-Enter = *S-*C-BackSpace
 key PageDown = Enter
 key *S-*C-BackSpace = *S-*C-Enter
 
-#--------------------------------------------------
-# Move between Virtual Desktops
-#--------------------------------------------------
-key W-C-h = W-C-Left
-key W-C-l = W-C-Right
-key Left  = W-C-Left
-key Right = W-C-Right
-
 #-------------------------------------#
-# Swap CapsLock and LeftCtrl
+# Task switching on Windows 10
 #-------------------------------------#
-mod control += CapsLock
-key *CapsLock = *LeftControl
-mod control -= LeftControl
-key *LeftControl = *CapsLock
-
-# Task switching
 key A-Tab = A-C-Tab
 key A-C-Tab = A-Tab
 
 #--------------------------------------------------
 # HH Keyborad
 #--------------------------------------------------
+
+#
 mod Windows -= RightWindows
 key RightWindows = Applications
