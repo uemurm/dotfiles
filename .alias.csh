@@ -20,4 +20,4 @@ alias   rm      'rm -i'
 alias   cp      'cp -i'
 
 alias   pwd     'echo $cwd | sed 's:/home/mitsuhide:~:''
-
+alias   less    'less --ignore-case'

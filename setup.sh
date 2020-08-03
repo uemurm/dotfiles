@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=(.cshrc .alias.csh .complete.tcsh .gitconf)
+DOT_FILES=(.cshrc .alias.csh .complete.tcsh .gitconfig)
 
 for file in ${DOT_FILES[@]}
 	do

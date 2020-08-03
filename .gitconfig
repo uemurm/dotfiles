@@ -1,7 +1,12 @@
 [user]
 	name = Mitsu Uemura
+	email = mitsuhide.uemura@nuix.com
+	username = muemura01
+[push]
+	default = matching
 [alias]
-    p  = push
-    st = status
-    ci = commit
-    br = branch
+	ci = commit
+	cf = config
+	br = branch
+	co = checkout
+	st = status
