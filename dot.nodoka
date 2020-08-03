@@ -36,12 +36,12 @@ key F1 = &SendPostMessage("PostTray",,"Nodoka", 0x0205, 0, 0)           # (3) Op
 #-----------------------------------------------------------------------------#
 
 #-------------------------------------#
-# Set hhCapsLock and LeftCtrl
+# Set CapsLock and LeftCtrl
 #-------------------------------------#
 mod control += CapsLock
 key *CapsLock = *LeftControl
 mod control -= LeftControl
-key *LeftControl = *LeftWindows
+key *LeftControl = *CapsLock
 
 #-------------------------------------#
 # For ThinkPad keyboards
