@@ -1,7 +1,3 @@
-[user]
-	name = Mitsu Uemura
-	email = mitsuhide.uemura@nuix.com
-	username = muemura01
 [push]
 	default = matching
 [alias]
@@ -10,3 +6,5 @@
 	br = branch
 	co = checkout
 	st = status
+[user]
+	useConfigOnly = true
