@@ -48,7 +48,7 @@ if($?tcsh)then
     set dextract
     set dirsfile    = ~/.cshdirs
     set savedirs
-    set autolist    = ambiguous
+    set autolist    = ambiguous   # Just setting this variable enables TAB key to list files.
     set history     = 2000
     set histdup     = erase
     set savehist    = ( 2000 merge )
