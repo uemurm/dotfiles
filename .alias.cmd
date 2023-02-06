@@ -17,5 +17,5 @@ doskey mv=mv --interactive $*
 doskey rm=rm --interactive $*
 doskey cp=cp --interactive $*
 
-@REM Maybe better to set an environment variable, LESS
-doskey less=less --ignore-case $*
+@REM Set a system environment variable, LESS. VISUAL is set to vim.
+@REM doskey less=less --ignore-case $*
