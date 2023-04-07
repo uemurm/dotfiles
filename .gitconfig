@@ -6,6 +6,7 @@
 	br = branch
 	co = checkout
 	st = status
+	p  = push
 [user]
 	useConfigOnly = true
 	name = Mitsu Uemura
