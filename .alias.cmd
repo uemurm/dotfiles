@@ -19,5 +19,8 @@ doskey cp=cp --interactive $*
 
 @REM Set a system environment variable, LESS, to --ignore-case, which would be better than following.
 @REM doskey less=less --ignore-case $*
+@REM Quotations should not be used on MS-DOS for the line below.
+set LESS=--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS
 
-@REM VISUAL should be set to vim.
+@REM EDITOR should be set to vim.
+set EDITOR=vim
