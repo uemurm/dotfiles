@@ -1,3 +1,5 @@
+# Can migrate to ~/.config/git/config if this file gets longer.
+# This file needs to be copied to %USERPROFILE%\.gitconfig
 [push]
 	default = matching
 [alias]
@@ -13,3 +15,5 @@
 	email = mitsuhide.uemura@gmail.com
 [credential]
 	helper = cache
+[includeIf "gitdir:C:/work/"]
+        path = C:/work/.gitconfig
