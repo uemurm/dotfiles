@@ -1,0 +1,19 @@
+# init file mainly for Clink. cf. https://chrisant996.github.io/clink/clink.html#init-file
+# mklink .inputrc dotfiles\.inputrc is necessary.
+$if clink
+
+set colored-completion-prefix                       on
+set colored-stats                                   on
+set mark-symlinked-directories                      on
+set visible-stats                                   off
+set completion-auto-query-items                     on
+set history-point-at-end-of-anchored-search         on
+set menu-complete-wraparound                        off
+set search-ignore-case                              on
+
+C-a: beginning-of-line
+C-g: forward-word
+C-b: backward-word
+C-w: backward-kill-word
+
+$endif
