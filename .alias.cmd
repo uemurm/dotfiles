@@ -13,6 +13,7 @@ doskey llta=ls -F --color -lhtra $*
 doskey lld=ls -F --color -lhd $*
 doskey la=ls -F --color -lha $*
 
+doskey vi=vim $*
 doskey mv=mv --interactive $*
 doskey rm=rm --interactive $*
 doskey cp=cp --interactive $*
