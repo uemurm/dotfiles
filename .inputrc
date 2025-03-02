@@ -1,5 +1,5 @@
 # init file mainly for Clink. cf. https://chrisant996.github.io/clink/clink.html#init-file
-# mklink .inputrc dotfiles\.inputrc is necessary.
+# mklink %USERPROFILE%\.inputrc %USERPROFILE%\dotfiles\.inputrc is necessary.
 $if clink
 
 set colored-completion-prefix                       on

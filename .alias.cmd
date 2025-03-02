@@ -2,7 +2,8 @@
 
 @REM @ is unnecessary for these lines as echoing is disabled in the first line already but `Ctrl+/` adds this way.
 @REM String Value of `HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\AutoRun` should point to this file.
-@REM e.x. \\wsl$\Ubuntu-20.04\home\mitsu\dotfiles\.alias.cmd
+@REM ex.) \\wsl$\Ubuntu-20.04\home\mitsu\dotfiles\.alias.cmd
+@REM   or %USERPROFILE%\Dotfiles\.alias.cmd
 @REM Just try `doskey /?`
 
 doskey ls=ls -F --color $*
