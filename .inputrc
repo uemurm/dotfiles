@@ -1,19 +1,40 @@
 # init file mainly for Clink. cf. https://chrisant996.github.io/clink/clink.html#init-file
-# mklink %USERPROFILE%\.inputrc %USERPROFILE%\dotfiles\.inputrc is necessary.
+# mklink %USERPROFILE%\.inputrc %USERPROFILE%\.config\dotfiles\.inputrc is necessary.
+
 $if clink
 
+# Readline displays the common prefix of the set of possible completions using a different color when listing completions.
 set colored-completion-prefix                       on
+
+# Readline displays possible completions using different colors to indicate their file type.
 set colored-stats                                   on
+
+# Completed names which are symbolic links to directories have a slash appended
 set mark-symlinked-directories                      on
-set visible-stats                                   off
+
+# A character denoting a file's type is appended to the filename when listing possible completions
+set visible-stats                                   on
+
+# Automatically prompts before displaying completions if they won't fit without scrolling
 set completion-auto-query-items                     on
+
+# Put the cursor at the end of the line when using history-search-forward or history-search-backward.
 set history-point-at-end-of-anchored-search         on
-set menu-complete-wraparound                        off
+
+# The menu-complete family of commands wraps around when reaching the end of the possible completions.
+set menu-complete-wraparound                        on
+
+# Controls whether the history search commands ignore case.
 set search-ignore-case                              on
 
+#----------------------------------------
+# My key bindings
+#----------------------------------------
 C-a: beginning-of-line
 C-g: forward-word
 C-b: backward-word
 C-w: backward-kill-word
+
+Tab: clink-select-complete 	# Shows an interactive menu of matches for completion.
 
 $endif
