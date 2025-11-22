@@ -47,4 +47,4 @@ set LESS=--ignore-case --LONG-PROMPT --RAW-CONTROL-CHARS
 set EDITOR=vim
 
 @REM Set colorful prompt for readability. ANSI code, 92:Bright Green, 91: Bright Red
-set PROMPT=$E[92m$P$G $E[0m
+set PROMPT=$E[91m$D $T $E[92m$P$_$G$E[0m 
