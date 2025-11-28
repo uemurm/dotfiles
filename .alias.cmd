@@ -10,13 +10,14 @@
 @REM `ls` aliases
 @REM
 @REM Cannot insert whitespaces before and after `=` in the following lines.
-doskey      ls=ls -F --color $*
-doskey      ll=ls -F --color -lh $*
-doskey      lt=ls -F --color -tr $*
-doskey     llt=ls -F --color -lhtr $*
-doskey    llta=ls -F --color -lhtra $*
-doskey     lld=ls -F --color -lhd $*
-doskey      la=ls -F --color -lha $*
+doskey      ls=ls --classify --color $*
+doskey      ll=ls --classify --color -lh $*
+doskey      lt=ls --classify --color -tr $*
+doskey     llt=ls --classify --color -lhtr $*
+doskey    llta=ls --classify --color -lhtra $*
+doskey     lld=ls --classify --color -lh --directory $*
+doskey      la=ls --classify --color --all $*
+doskey     lla=ls --classify --color -hl --all $*
 
 doskey vi=vim $*
 doskey mv=mv --interactive $*
