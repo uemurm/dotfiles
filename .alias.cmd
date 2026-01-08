@@ -27,7 +27,7 @@ doskey cp=cp --interactive $*
 @REM
 @REM Git aliases
 @REM
-doskey   gst=git status $*
+doskey    gs=git status $*
 doskey gdiff=git diff $*
 doskey   gbr=git branch $*
 doskey  gadd=git add $*
