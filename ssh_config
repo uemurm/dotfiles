@@ -1,0 +1,5 @@
+# ssh via port 22 can be blocked by firewalls. Use 443 instead.
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+  User git
