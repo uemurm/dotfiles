@@ -25,7 +25,7 @@ doskey rm=rm --interactive $*
 doskey cp=cp --interactive $*
 
 @REM
-@REM Git aliases
+@REM Git-related aliases
 @REM
 doskey    gs=git status $*
 doskey gdiff=git diff $*
@@ -38,6 +38,15 @@ doskey   gpl=git pull $*
 doskey    gf=git fetch $*
 doskey  glog=git log $*
 doskey gshow=git show $*
+
+
+@REM
+@REM Docker-related aliases
+@REM
+doskey    di=docker image $*
+doskey    dc=docker container $*
+doskey  dcmp=docker compose $*
+
 
 @REM Set a system environment variable, LESS, to --ignore-case, which would be better than following.
 @REM doskey less=less --ignore-case $*
